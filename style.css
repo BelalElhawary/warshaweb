@@ -1,0 +1,67 @@
+body {
+    background: rgb(255, 255, 255);
+    font-family: sans-serif;
+    margin: 0;
+}
+
+.Header {
+    position: absolute;
+    width: 100%;
+    height: 100px;
+    background: #40AADF;
+    display: flex;
+}
+
+.Header p {
+    color: white;
+    font-size: 32px;
+    margin-left: 30px;
+    margin-top: 32px;
+    font-family: 'Almarai', sans-serif;
+    font-weight: bold;
+}
+
+.Header img {
+    margin-left: 25px;
+    margin-top: 25px;
+    width: 50px;
+    height: 50px;
+}
+
+.page {
+    position: absolute;
+    transform: translate(-50%, -50%);
+    top: 50%;
+    left: 50%;
+    width: 800px;
+    height: 600px;
+    background: none;
+    border-radius: 25px;
+    text-align: center;
+    font-family: 'Almarai', sans-serif;
+    font-size: 20px;
+}
+
+.page img {
+    width: 250px;
+    height: 250px;
+}
+
+.page button {
+    margin-top: 20px;
+    width: 300px;
+    height: 100px;
+    background: #40AADF;
+    border: solid white 5px;
+    border-radius: 20px;
+    color: white;
+    font-weight: bold;
+    font-family: sans-serif;
+    font-size: 32px;
+}
+
+@media only screen and (max-width: 768px) {
+    .Header {
+        height: 200px;
+    }
+}
