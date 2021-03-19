@@ -6,24 +6,40 @@
     <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@200&family=Tajawal:wght@200&display=swap" rel="stylesheet">
     <link href="style.css" type="text/css" rel="stylesheet">
     <title>Warsha</title>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script>
+        $(function() {
+            $('a[href*=\\#]:not([href=\\#])').on('click', function() {
+                var target = $(this.hash);
+                target = target.length ? target : $('[name=' + this.hash.substr(1) + ']');
+                if (target.length) {
+                    $('html,body').animate({
+                        scrollTop: target.offset().top
+                    }, 1000);
+                    return false;
+                }
+            });
+        });
+    </script>
 </head>
 
 <body>
     <div class="Header">
         <p>WARSHA</p>
-        <h1><a href="">HOME</a></h1>
-        <h1><a href="">ABOUT</a></h1>
-        <h1><a href="">FEEDBACK</a></h1>
-        <h1><a href="">SUPPORT</a></h1>
-        <h1><a href="">DOWNLOAD</a></h1>
-        <h1><a href="">DEVELOPER</a></h1>
+        <h1><a href="#HOME">HOME</a></h1>
+        <h1><a href="#AB">ABOUT</a></h1>
+        <h1><a href="#FEED">FEEDBACK</a></h1>
+        <h1><a href="#SUP">SUPPORT</a></h1>
+        <h1><a href="#DOWN">DOWNLOAD</a></h1>
+        <h1><a href="#DEV">DEVELOPER</a></h1>
     </div>
 
     <div class="holder">
-        <div class="home">
+        <div class="home" id="HOME">
             <img src="./tol2.jpg">
         </div>
-        <div class="about">
+        <div class="about" id="AB">
             <div class="text">
                 <p class="start">ABOUT</p>
                 <p class="end">WARSHA APP</p>
@@ -32,7 +48,7 @@
             <img src="./tol3.jpg">
         </div>
 
-        <div class="about">
+        <div class="about" id="FEED">
             <div class="text">
                 <p class="start">GIVE</p>
                 <p class="mid">us</p>
@@ -42,7 +58,7 @@
             <img src="./feedback.png">
         </div>
 
-        <div class="about">
+        <div class="about" id="SUP">
             <div class="text">
                 <p class="start">SUPPORT</p>
                 <p class="mid">on</p>
@@ -52,7 +68,7 @@
             <img src="./patreon.png">
         </div>
 
-        <div class="about">
+        <div class="about" id="DOWN">
             <div class="text">
                 <p class="start">DOWNLOAD</p>
                 <p class="mid">for</p>
@@ -62,6 +78,19 @@
             <div class="download">
                 <button>DOWNLOAD</button>
                 <h3>Last stable Version 0.01</h3>
+            </div>
+        </div>
+
+        <div class="about" id="DEV">
+            <div class="text">
+                <p class="start">THANKS</p>
+                <p class="mid">to</p>
+                <p class="end">DEVELOPERS</p>
+                <h3>بلال محمد : البرمجة والتصميم & محمد وجدي : ادارة المشروع و الفكرة</h3>
+            </div>
+            <div class="im">
+                <img src="./man.jpg">
+                <img src="./dev.jpg">
             </div>
         </div>
 
